@@ -1,0 +1,122 @@
+// Template: Climb EP
+notify "Running Template Climb EP (to 1e50)"
+auto infinity 1.00e12 x highest
+auto eternity 100 x highest
+while ep < 1.00e5 {
+ studies nowait load name Strt
+ studies respec
+ wait infinity
+}
+auto infinity 1.00e25 x highest
+while total tt < 140 {
+  studies nowait load name FARM
+  studies respec
+  wait infinity
+}
+notify "Complete ECs 1-3"
+if ec3 completions < 4 {
+  studies nowait purchase TS_EC3
+  unlock ec3
+  start ec3
+  wait pending completions >= 2
+eternity }
+if ec2 completions < 3 {
+  studies nowait purchase TS_EC2
+  unlock ec2
+  start ec2
+  wait pending completions >=2
+eternity nowait
+  }
+if ec1 completions < 4 {
+  studies purchase TS_EC1
+  unlock ec1
+  start ec1
+  wait pending completions >=4
+  eternity }
+notify "TT Grind"
+auto infinity 1.00e30 x highest
+auto eternity 1.00e5 x highest
+while total tt < 250 {
+ studies nowait load name FARM
+ studies respec
+  wait infinity }
+eternity nowait
+notify "Complete ECs 1-6"
+if ec3 completions < 5 {
+  studies nowait purchase TS_EC3
+  studies nowait purchase 181
+  unlock ec3
+  start ec3
+  wait total completions >=5
+  eternity }
+if ec2 completions < 5 {
+  studies nowait purchase TS_EC2
+  studies nowait purchase 181
+  unlock ec2
+  start ec2
+  wait total completions  >= 5
+eternity 
+  }
+if ec1 completions < 5 {
+  studies purchase TS_EC1
+  studies nowait purchase 181
+  unlock ec1
+  start ec1
+  wait ec1 completions >=5
+  eternity }
+if ec5 completions < 3 {
+  studies nowait purchase TS_EC5
+  unlock ec5
+  start ec5
+  wait pending completions >=3
+eternity nowait
+  }
+if ec6 completions < 3 {
+  studies purchase TS_EC6
+  unlock ec6
+  start ec6
+  wait total completions >=3
+  eternity }
+notify "TT Grind"
+auto eternity 1.00e5 x highest
+while total tt < 320 {
+ studies nowait load name IDLE
+  studies nowait load name FARM
+  black hole on
+ studies respec
+  wait eternity }
+eternity nowait
+notify "Complete ECs 4-7"
+  if total tt >= 320 {
+    auto infinity off }
+    if ec4 completions < 5 {
+      studies nowait purchase TS_EC4
+      unlock ec4
+      start ec4
+      wait pending completions >4   
+      eternity }
+    if ec5 completions < 5 {
+      studies nowait purchase TS_EC5
+      unlock ec5
+      start ec5
+      wait total completions >= 5
+      eternity }
+    if ec6 completions < 5 {
+      studies nowait purchase TS_EC6
+      unlock ec6
+      start ec6
+      wait total completions >=3
+      eternity }
+    if ec7 completions < 5 {
+      studies nowait purchase TS_EC7
+      unlock ec7
+      start ec7
+      wait total completions >= 2
+      eternity  }
+  auto eternity 1.00e15 x highest }
+if total tt <=8000 {
+  auto eternity 1.00e80 x highest
+  studies nowait load name FARM
+  studies respec
+  wait eternity }
+  studies nowait load name FARM
